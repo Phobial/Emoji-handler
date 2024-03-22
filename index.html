@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>emoji</title>
+    <style>
+        body {
+            background: rgb(251, 63, 175);
+            background: radial-gradient(circle, rgba(251, 63, 175, 1) 0%, rgba(243, 252, 70, 1) 100%);
+        }
+        .header{
+            text-align: center;
+            color: red;
+        }
+
+        .container {
+            margin: 10px auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .emoji-container {
+            height: 300px;
+            width: 400px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+
+        }
+
+        .emoji {
+            height: 250px;
+            display: block;
+            margin: 30px auto;
+        }
+        .btn{
+            margin:20px auto;
+            border: none;
+        }
+        .emoji-btn{
+            border: none;
+            height: 50px;
+            width: 150px;
+            background: goldenrod;
+            font-weight: 700;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        @media screen and (max-width: 600px) {
+            .emoji-container{
+                width: 80%;
+                height: 80%;
+            }
+            .emoji {
+                height: 100px;
+            }
+            .emoji-btn{
+                width: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="header">Emoji Handler</h1>
+        <div class="emoji-container">
+            <img src="happy.gif" alt="happy" class="emoji" id="emoji">
+        </div>
+        <div class="btn">
+            <button class="emoji-btn" onclick="happy()">Happy</button>
+            <button class="emoji-btn" onclick="sad()">Sad</button>
+            <button class="emoji-btn" onclick="angry()">Angry</button>
+            <button class="emoji-btn" onclick="greedy()">Greedy</button>
+            <button class="emoji-btn" onclick="sleep()">Sleepy</button>
+            <button class="emoji-btn" onclick="party()">party</button>
+            <button class="emoji-btn" onclick="cynical()">Cynical</button>
+
+        </div>
+    </div>
+    <script>
+        function sad(){
+            const getemoji=document.getElementById("emoji")
+            getemoji.src="sad.gif"
+        }
+        function happy(){
+            const getemoji=document.getElementById("emoji")
+            getemoji.src="happy.gif"
+        }
+        function angry(){
+            const getemoji=document.getElementById("emoji")
+            getemoji.src="angry.gif"
+        }
+        function greedy(){
+            const getemoji=document.getElementById("emoji")
+            getemoji.src="greed.gif"
+        }
+        function sleep(){
+            const getemoji=document.getElementById("emoji")
+            getemoji.src="sleep.gif"
+        }
+        function party(){
+            const getemoji=document.getElementById("emoji")
+            getemoji.src="party.gif"
+        }
+        function cynical(){
+            const getemoji=document.getElementById("emoji")
+            getemoji.src="cynical.gif"
+        }
+    </script>
+</body>
+
+</html>
